@@ -1,0 +1,58 @@
+package com.zhych.test;
+
+import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.test.context.ContextConfiguration;
+import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
+
+import com.zhych.bean.Department;
+import com.zhych.bean.Employee;
+import com.zhych.dao.DepartmentMapper;
+import com.zhych.dao.EmployeeMapper;
+
+
+/**
+ * 测试dao层的工作
+ * 
+ * @author zhangyuchen
+ *推荐spring的项目就可以使用Spring的单元测试，可以自动注入我们需要的组件
+ *1、导入SpringTest模块
+ *2、@ContextConfiguration指定Spring配置文件的位置
+ *3、直接autorwired要使用的组件即可
+ *
+ *
+ *
+ */
+@RunWith(SpringJUnit4ClassRunner.class)
+@ContextConfiguration(locations={"classpath:applicationContext.xml"})
+public class MapperTest {
+	@Autowired
+	DepartmentMapper departmentMapper;
+	@Autowired
+	EmployeeMapper employeeMapper;
+	/**
+	 * 
+	 * @Title 测试DepartmentMapper
+	 * @Description
+	 * @param
+	 * @author zhangyuchen
+	 * @throws 2017年8月31日下午2:46:58
+	 */
+	@Test
+	public void testCRUD() {
+//		//1 创建SpringMvc容器
+//		ApplicationContext ioc = new ClassPathXmlApplicationContext("/ssm-crud/src/main/resources/applicationContext.xml");
+//		//2、从容器中获取Mapper
+//		ioc.getBean(DepartmentMapper.class);
+		System.out.println("========================================="+departmentMapper);
+		//1.插入几个部门
+//		departmentMapper.insertSelective(new Department(null, "开发部"));
+//		departmentMapper.insertSelective(new Department(null, "测试部"));
+//		//2.生成员工数据
+//		employeeMapper.insertSelective(new Employee(null, "Jerry", "M", "Jery@guigu.com", 1));
+		//3.
+		
+	}
+
+}
