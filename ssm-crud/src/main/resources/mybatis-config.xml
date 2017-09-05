@@ -6,8 +6,11 @@
 	<settings>
 		<setting name="mapUnderscoreToCamelCase" value="true"></setting>
 	</settings>
+
 	<typeAliases>
 		<package name="com.zhych.bean"></package>
 	</typeAliases>
-
+	<plugins>
+		<plugin interceptor="com.github.pagehelper.PageInterceptor"></plugin>
+	</plugins>
 </configuration>
